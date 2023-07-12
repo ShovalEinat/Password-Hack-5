@@ -79,6 +79,16 @@
 
 
     <script>
+        
+        let userPassInput = document.getElementById("userPassInput");
+        
+        userPassInput.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            checkPass();
+        }
+        });         
+        
         let roawdrL412R8 = decodeURIComponent("%22.LwYB_Qdm%3F3");
 
         function checkPass() {
@@ -88,17 +98,17 @@
             alert("Nice you got the right password!");
             window.location = "https://shovaleinat.github.io/Password-Hack-1";
            }
-           else if(document.getElementById("userPassInput").value == ""){
+           else if(userPassInput.value == ""){
             alert("You need to type a password!");
            }
            else{
             alert("The password is incorrect, try again.");
-            document.getElementById("userPassInput").value = "";
+            userPassInput.value = "";
            };
         };
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    let jIcGVX6BZNga = "2c0sN0uuR258";
         function showPass() {
-            var x = document.getElementById("userPassInput");
+            var x = userPassInput;
             if (x.type === "password") {
             x.type = "text";
             } else {
